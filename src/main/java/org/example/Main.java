@@ -2,6 +2,10 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Car car = new Car("Toyota", "Yaris", 2017, 55);
+        car.accelerate();
+        car.brake();
+        car.honk();
+        car.displayInfo();
     }
 }
