@@ -19,8 +19,10 @@ public class Car {
     }
 
     public void brake() {
-        speed -= 5;
-        if (speed <= 0) {
+
+        if (speed >= 5) {
+            speed -= 5;
+        } else {
             System.out.println("Speed can not go lower than 0mph.");
         }
     }
