@@ -14,4 +14,10 @@ class CarTest {
         Assertions.assertEquals(55, car.getSpeed());
     }
 
+    @Test
+    public void carConstructorTestWithNegativeSpeed() {
+        Car car = new Car("Toyota", "Yaris", 2017, -5);
+        Assertions.assertEquals(0, car.getSpeed());
+    }
+
 }
