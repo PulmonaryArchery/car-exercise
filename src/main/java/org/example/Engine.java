@@ -18,12 +18,12 @@ public class Engine {
         return horsepower;
     }
 
-    public void start() {
-        System.out.println("Engine started");
+    public String start() {
+        return "Engine started";
     }
 
-    public void stop() {
-        System.out.println("Engine stopped");
+    public String stop() {
+        return "Engine stopped";
     }
 
 }

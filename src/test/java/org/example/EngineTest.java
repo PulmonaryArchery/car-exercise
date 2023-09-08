@@ -16,13 +16,13 @@ class EngineTest {
 
     @Test
     void start() {
-        String source = "Engine started";
-        assertEquals("Engine started", source);
+        Engine engine = new Engine("Electric", 500);
+        assertEquals("Engine started", engine.start());
     }
 
     @Test
     void stop() {
-        String source = "Engine stopped";
-        assertEquals("Engine stopped", source);
+        Engine engine = new Engine("Electric", 500);
+        assertEquals("Engine stopped", engine.stop());
     }
 }
