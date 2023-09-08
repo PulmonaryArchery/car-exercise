@@ -21,7 +21,7 @@ class CarTest {
         try {
             Car car = new Car("Toyota", "Yaris", 2017, -5);
             fail("Illegal speed argument <\\" + car.getSpeed() + ">. Speed must be a positive number");
-        } catch (InstantiationError e) {
+        } catch (IllegalArgumentException e) {
 
         }
 
