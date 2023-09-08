@@ -11,7 +11,27 @@ public class Car {
         this.brand = brand;
         this.model = model;
         this.year = year;
-        this.speed = speed;
+        if (speed < 0) {
+            this.speed = 0;
+        } else {
+            this.speed = speed;
+        }
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public int getSpeed() {
+        return speed;
     }
 
     public void accelerate() {
