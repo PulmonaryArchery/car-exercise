@@ -3,6 +3,8 @@ package org.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.fail;
+
 class CarTest {
 
     @Test
@@ -16,8 +18,13 @@ class CarTest {
 
     @Test
     public void carConstructorTestWithNegativeSpeed() {
-        Car car = new Car("Toyota", "Yaris", 2017, -5);
-        Assertions.assertEquals(0, car.getSpeed());
+        try {
+            Car car = new Car("Toyota", "Yaris", 2017, -5);
+            fail("Illegal speed argument <\\" + car.getSpeed() + ">. Speed must be a positive number");
+        } catch (InstantiationError e) {
+
+        }
+
     }
 
 }

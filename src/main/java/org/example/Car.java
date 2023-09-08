@@ -12,7 +12,8 @@ public class Car {
         this.model = model;
         this.year = year;
         if (speed < 0) {
-            this.speed = 0;
+            System.out.println("Illegal speed argument <" + speed + ">. Speed must be a positive number");
+            throw new InstantiationError();
         } else {
             this.speed = speed;
         }
