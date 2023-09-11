@@ -6,22 +6,22 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class EngineTest {
 
-    Engine engine = new Engine("Electric", 500);
+    private final Engine underTest = new Engine("Electric", 500);
 
     @Test
     void testEngineConstructor() {
-        Assertions.assertEquals("Electric", engine.getType());
-        Assertions.assertEquals(500, engine.getHorsepower());
+        Assertions.assertEquals("Electric", underTest.getType());
+        Assertions.assertEquals(500, underTest.getHorsepower());
     }
 
     @Test
     void testStart() {
-        assertEquals("Engine started", engine.start());
+        assertEquals("Engine started", underTest.start());
     }
 
     @Test
     void testStop() {
-        assertEquals("Engine stopped", engine.stop());
+        assertEquals("Engine stopped", underTest.stop());
     }
 
 }
