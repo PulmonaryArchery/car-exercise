@@ -19,11 +19,15 @@ public class Engine {
     }
 
     public String start() {
-        return "Engine started";
+        String start = "Engine started";
+        System.out.println(start);
+        return start;
     }
 
     public String stop() {
-        return "Engine stopped";
+        String stop = "Engine stopped";
+        System.out.println(stop);
+        return stop;
     }
 
 }
