@@ -9,18 +9,18 @@ class EngineTest {
     Engine engine = new Engine("Electric", 500);
 
     @Test
-    void engineConstructorTest() {
+    void testEngineConstructor() {
         Assertions.assertEquals("Electric", engine.getType());
         Assertions.assertEquals(500, engine.getHorsepower());
     }
 
     @Test
-    void start() {
+    void testStart() {
         assertEquals("Engine started", engine.start());
     }
 
     @Test
-    void stop() {
+    void testStop() {
         assertEquals("Engine stopped", engine.stop());
     }
 

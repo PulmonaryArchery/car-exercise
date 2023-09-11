@@ -8,7 +8,7 @@ class CarTest {
     Car car = new Car("Toyota", "Yaris", 2017, 55, new Engine("Electric", 500));
 
     @Test
-    void carConstructorTest() {
+    void testCarConstructor() {
         Assertions.assertEquals("Toyota", car.getBrand());
         Assertions.assertEquals("Yaris", car.getModel());
         Assertions.assertEquals(2017, car.getYear());
@@ -17,7 +17,7 @@ class CarTest {
     }
 
     @Test
-    void carConstructorTestWithNegativeSpeed() {
+    void testCarConstructorTestWithNegativeSpeed() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> new Car("Toyota", "Yaris",
                 2017, -5, new Engine("Electric", 500)));
     }
