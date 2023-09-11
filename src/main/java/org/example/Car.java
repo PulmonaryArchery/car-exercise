@@ -37,6 +37,10 @@ public class Car {
         return speed;
     }
 
+    public Engine getEngine() {
+        return engine;
+    }
+
     public void accelerate() {
         speed += 5;
     }
