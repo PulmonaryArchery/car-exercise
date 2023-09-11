@@ -6,8 +6,9 @@ public class Car {
     private String model;
     private int year;
     private int speed;
+    private Engine engine;
 
-    public Car(String brand, String model, int year, int speed) {
+    public Car(String brand, String model, int year, int speed, Engine engine) {
         this.brand = brand;
         this.model = model;
         this.year = year;
@@ -17,6 +18,7 @@ public class Car {
         } else {
             this.speed = speed;
         }
+        this.engine = engine;
     }
 
     public String getBrand() {
