@@ -2,10 +2,11 @@ package org.example;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 class CarTest {
 
-    private final Engine mockEngine = new Engine("Electric", 500);
+    private final Engine mockEngine = Mockito.mock(Engine.class);
     private final Car underTest = new Car("Toyota", "Yaris", 2017, 55, mockEngine);
 
     @Test
