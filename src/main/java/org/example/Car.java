@@ -63,4 +63,12 @@ public class Car {
                 + "\nYear = " + year + "\nCurrent Speed = " + speed);
     }
 
+    public void startCar() {
+        engine.start();
+    }
+
+    public void stopCar() {
+        engine.stop();
+    }
+
 }
