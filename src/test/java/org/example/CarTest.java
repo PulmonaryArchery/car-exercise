@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 
 class CarTest {
 
-    private final Car underTest = new Car("Toyota", "Yaris", 2017, 55, new Engine("Electric", 500));
+    private final Engine mockEngine = new Engine("Electric", 500);
+    private final Car underTest = new Car("Toyota", "Yaris", 2017, 55, mockEngine);
 
     @Test
     void testCarConstructor() {
@@ -19,7 +20,7 @@ class CarTest {
     @Test
     void testCarConstructorTestWithNegativeSpeed() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> new Car("Toyota", "Yaris",
-                2017, -5, new Engine("Electric", 500)));
+                2017, -5, mockEngine));
     }
 
 }
