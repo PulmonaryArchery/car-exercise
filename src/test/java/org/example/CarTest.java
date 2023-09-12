@@ -24,4 +24,16 @@ class CarTest {
                 2017, -5, mockEngine));
     }
 
+    @Test
+    void testStartCar() {
+        underTest.startCar();
+        Mockito.verify(mockEngine).start();
+    }
+
+    @Test
+    void testStopCar() {
+        underTest.stopCar();
+        Mockito.verify(mockEngine).stop();
+    }
+
 }
